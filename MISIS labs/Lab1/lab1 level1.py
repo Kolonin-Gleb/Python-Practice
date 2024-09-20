@@ -161,9 +161,33 @@ while x <= 1.5+0.1:
 
 # task 14
 '''
+fib1 = 1
+fib2 = 1
+
+# Вычисляем и печатаем члены Фибоначи
+print(fib1, fib2, end=" ")
+for _ in range(6):
+    next_fib = fib1 + fib2
+    print(next_fib, end=" ")
+    fib1 = fib2
+    fib2 = next_fib
+
+# 1 1 2 3 5 8 13 21
 '''
 
 # task 15
 '''
-'''
+# Инициализация числителей и знаменателей
+num1, den1 = 1, 1
+num2, den2 = 2, 1
 
+# Вычисляем следующие три дроби до пятого члена
+for _ in range(3):
+    num_next = num1 + num2
+    den_next = den1 + den2
+    
+    num1, den1 = num2, den2
+    num2, den2 = num_next, den_next
+
+print(f"5-й член последовательности: {num2}/{den2}")
+'''
