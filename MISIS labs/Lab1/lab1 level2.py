@@ -102,7 +102,7 @@ for day in range(7): # 7 дней
     total += distance
     distance += distance * increase_rate
 print("Суммарный путь за 7 дней = ")
-print(total)
+print(total) # 
 
 # б) Количество дней, для преодоления 100 км
 distance = initial_distance
