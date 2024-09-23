@@ -43,6 +43,21 @@ def calculate_series(x):
     
     return s
 
+# Функция для вычисления суммы ряда
+# С использованием рекурентного вычисления члена (Оптимизация)
+def calculate_series_recurent(x):
+    s = 0  # Общая сумма накопленная в границах диапозона
+    part = 1  # Первый член ряда, т.к. (a0 = 1)
+    i = 0  # Счетчик членов
+
+    # Сравнение предыдущего члена по модулю с заданной точностью
+    while abs(part) >= epsilon:  # Пока модуль текущего члена больше epsilon
+        s += part  # Добавляем текущий член к общей сумме
+        i += 1  # Увеличиваем счетчик членов
+        part *= (2 * x) / i  # Рекуррентная формула для следующего члена
+
+    return s
+
 # Функция для вычисления e^(2x)
 def calculate_y(x):
     return math.exp(2 * x)
@@ -50,8 +65,10 @@ def calculate_y(x):
 # Проходим по диапазону [a, b] с шагом h
 x = a # Устанавливаем начальную границу в x
 while x <= b:
-    series_sum = calculate_series(x)
+    # series_sum = calculate_series_recurent(x)
+    series_sum = calculate_series_recurent(x)
     y_value = calculate_y(x)
     # :.4f - 4 знака после запятой. Такой точность вывода хватит, учитывая заданный epsilon
     print(f"x = {x:.2f} | s(x) = {series_sum:.4f} | y(x) = {y_value:.4f}")
     x += h
+

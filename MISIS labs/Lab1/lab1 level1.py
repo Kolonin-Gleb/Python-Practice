@@ -40,12 +40,13 @@ print(f"Значение суммы: {s}") # при x = 90 Ответ: -0.454602
 
 # task 5
 '''
+
 p = float(input("Введите p: "))
 h = float(input("Введите h: "))
 s = 0
 
-for n in range(10):
-    s += (p + n * h) ** 2
+for i in range(10):
+    s += (p + i * h) ** 2
 
 print(f"Сумма квадратов 10 членов ар. прогрессии: {s}")
 '''
@@ -127,9 +128,9 @@ for _ in range(6):
 # task 12
 '''
 x = float(input("Введите x: "))
-s = 1
+s = 0
 
-for n in range(1, 11):
+for n in range(11):
     s += 1 / (x ** n)
 
 print(s) # при x = 3 ответ: 1.499991532456096
@@ -176,6 +177,7 @@ for _ in range(6):
 
 # task 15
 '''
+
 # Инициализация числителей и знаменателей
 num1, den1 = 1, 1
 num2, den2 = 2, 1

@@ -28,13 +28,13 @@ step = 3
 n = 1 # поиск макс. n
 
 while product <= L:
-    product *= n  # Домножаем произведение
     n += step
+    product *= n  # Домножаем произведение
 
 # Откатываемся к предыдущему шагу
 n -= step
 
-print(f"Наибольший сомножитель n = {n}") # 16
+print(f"Наибольший сомножитель n = {n}") # 13
 '''
 
 # Task 3
@@ -91,14 +91,13 @@ print(f"Частное: {quotient}, Остаток: {N}")
 
 # Task 7
 '''
-'''
 initial_distance = 10  # начальная дистанция = 10 км
 increase_rate = 0.1  # увеличение дневной нормы на 10%
 
 # a) Суммарный путь за 7 дней
 distance = initial_distance
 total = 0
-for day in range(7): # 7 дней
+for _ in range(7): # 7 дней
     total += distance
     distance += distance * increase_rate
 print("Суммарный путь за 7 дней = ")
@@ -123,10 +122,11 @@ days = 0
 while distance <= 20: # Больше 20 км или нет?
     distance += distance * increase_rate
     days += 1
-days + 1  # TODO: Добавляем 1, так как считаем полный день
+days + 1  # TODO: Добавляем 1, так как считаем полный день?
 
 print("Количество дней до пробежки более 20 км в день = ")
 print(days)
+'''
 
 
 # Task 8
